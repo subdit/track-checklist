@@ -1,12 +1,18 @@
 import Button from './Button';
+import { secondaryButtons } from './lib/constants';
 
 export default function ButtonGroup() {
+  // List of buttons then map it out
+
   return (
     <section className='button-group'>
-      <Button type='secondary'>Mark all as completed</Button>
-      <Button type='secondary'>Mark all as incompled</Button>
-      <Button type='secondary'>Reset to initial</Button>
-      <Button type='secondary'>Remove List</Button>
+      {secondaryButtons.map(buttonText => {
+        return (
+          <Button key={buttonText} type='secondary'>
+            {buttonText}
+          </Button>
+        );
+      })}
     </section>
   );
 }
