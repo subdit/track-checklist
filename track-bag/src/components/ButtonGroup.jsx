@@ -1,12 +1,12 @@
-import React from 'react';
+import Button from './Button';
 
 export default function ButtonGroup() {
   return (
     <section className='button-group'>
-      <button className='btn'>Mark all as Completed</button>
-      <button className='btn'>Mark all as incompleted</button>
-      <button className='btn'>Reset to initial</button>
-      <button className='btn'>Remove all Items</button>
+      <Button type='secondary'>Mark all as completed</Button>
+      <Button type='secondary'>Mark all as incompled</Button>
+      <Button type='secondary'>Reset to initial</Button>
+      <Button type='secondary'>Remove List</Button>
     </section>
   );
 }
